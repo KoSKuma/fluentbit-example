@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-log-generator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-log-generator
+  template:
+    metadata:
+      labels:
+        app: example-log-generator
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: example-log-generator
+          image: koskuma/example-log-generator
