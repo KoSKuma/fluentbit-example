@@ -32,9 +32,10 @@ docker run --name elasticsearch \
     -d docker.elastic.co/elasticsearch/elasticsearch:7.8.0
 ```
 
-## Update fluent-bit deployment configurations
-You have to update the IP address of the Elasticsearch and InfluxDB containers. 
-In deployments/fluentbit-config.yml and deployments/fluentbit-deploy.yml: update the IP 127.0.0.1 to your IP address.
+## Before deployemnt - update fluent-bit deployment configurations
+You have to update the IP address of the Elasticsearch and InfluxDB containers in config files.
+
+Update the IP 127.0.0.1 to your IP address in [deployments/fluentbit-config.yml](deployments/fluentbit-config.yml) and [deployments/fluentbit-deploy.yml](deployments/fluentbit-deploy.yml)
 ## Deploy Example Log Generator
 ```sh
 kubectl apply -f deployments/deployment.yml
